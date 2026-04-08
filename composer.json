@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Alura\\Pdo\\": "src/"
+        },
+        "classmap": [
+            "src/Infrastructure/Persistence/ConectionConstructor.php"
+        ]
+    }
+}
