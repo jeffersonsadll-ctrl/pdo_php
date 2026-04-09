@@ -8,11 +8,15 @@ class Student
     private string $name;
     private \DateTimeInterface $birthDate;
 
+    private array $phones;
+
     public function __construct(?int $id, string $name, \DateTimeInterface $birthDate)
     {
         $this->id = $id;
         $this->name = $name;
         $this->birthDate = $birthDate;
+
+        $this->phones = [];
     }
 
     public function id(): ?int
@@ -49,5 +53,16 @@ class Student
         }
 
         $this->id = $id;
+    }
+
+    
+    public function phones(): array
+    {
+        return $this->phones;
+    }
+
+    public function addPhone(Phone $phone): void
+    {
+        $this->phones[] = $phone;
     }
 }
